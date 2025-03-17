@@ -106,7 +106,7 @@ function adivinarNumero()
 
 function contarVocales()
 {
-    let text = document.getElementById("word").value;
+    const text = document.getElementById("word").value;
     text = text.toLowerCase()
     let cantVocales = 0;
 
@@ -119,4 +119,37 @@ function contarVocales()
     }
 
     console.log(cantVocales);
+}
+
+function invertirPalabra()
+{
+    const text = document.getElementById("reversed").value;
+    let output = "";
+
+    for (let i = text.length - 1; i >= 0; i--)
+    {
+        output += text[i];
+    }
+
+    console.log(output)
+}
+
+function palindromoVerifier()
+{
+    const text = document.getElementById("palindromo").value;
+    let txet = "";
+
+    for (let i = text.length - 1; i >= 0; i--)
+    {
+        txet += text[i];
+    }
+
+    if (txet == text)
+    {
+        console.log("La palabra es un palindromo.");
+    }
+    else
+    {
+        console.log("La palabra no es un palindromo.");
+    }
 }
