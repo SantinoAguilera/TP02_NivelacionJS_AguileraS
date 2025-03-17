@@ -52,3 +52,71 @@ function parOImpar()
         console.log("El numero es impar.")
     }
 }
+
+function contarCaracteres()
+{
+    let text = document.getElementById("text").value;
+
+    console.log(text.length);
+}
+
+function repetirFrase()
+{
+    let text = document.getElementById("phrase").value;
+    let repetition = document.getElementById("repetition").value;
+
+    for (let i = 0; i < repetition; i++)
+    {
+        console.log(text);
+    }
+}
+
+function multiplos()
+{
+    let num = document.getElementById("number4").value;
+
+    for (let i = 0; i < 10; i++)
+    {
+        console.log(num * (i + 1));
+    }
+}
+
+    const rng = Math.floor(Math.random(10) + 1);
+    console.log(rng);
+
+function adivinarNumero()
+{
+    let num = document.getElementById("number5").value;
+
+    num = parseFloat(num)
+
+    if (num > rng)
+    {
+        console.log("Menor");
+    }
+    else if (num == rng)
+    {
+        console.log("Acertaste");
+    }
+    else
+    {
+        console.log("Mayor");
+    }
+}
+
+function contarVocales()
+{
+    let text = document.getElementById("word").value;
+    text = text.toLowerCase()
+    let cantVocales = 0;
+
+    for (let i = 0; i < text.length; i++)
+    {
+        if (text[i] == 'a' || text[i] == 'e' || text[i] == 'i' || text[i] == 'o' || text[i] == 'u')
+        {
+            cantVocales++;
+        }
+    }
+
+    console.log(cantVocales);
+}
